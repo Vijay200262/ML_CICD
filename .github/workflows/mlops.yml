@@ -14,8 +14,8 @@ jobs:
 
         steps:
             #step 1 checkout source code
-            - name: checkout repository
-              uses: actions/chekout@v4
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
 
             #step 2 setup python environment
@@ -63,6 +63,9 @@ jobs:
         needs: build-test-train
         runs-on: ubuntu-latest
 
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
         steps: 
             #step 8 Downlaod the train model
@@ -79,4 +82,9 @@ jobs:
               run: |
                 echo "Model deployed successfully"
                 ls -l models
-                
+
+
+
+
+
+
