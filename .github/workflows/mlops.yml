@@ -67,7 +67,6 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
-        steps: 
             #step 8 Downlaod the train model
             - name: Download model artifact
               uses: actions/download-artifact@v4
